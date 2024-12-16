@@ -320,7 +320,7 @@ To run all the Gemm accelerator tests, use:
 
 ```
 
-sbt test
+sbt test -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
 
 ```
 
@@ -329,7 +329,7 @@ To run specific test, use:
 
 ```
 
-sbt "testOnly gemm.${chisel_test_name}"
+sbt "testOnly gemm.${chisel_test_name}" -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
 
 ```
 
@@ -339,7 +339,7 @@ where `chisel_test_name` is the class name of the specific test. For instance, u
 
 ```
 
-sbt "testOnly gemm.GemmArrayRandomTest"
+sbt "testOnly gemm.GemmArrayRandomTest" -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
 
 ```
 
@@ -356,7 +356,7 @@ To generate the corresponding system verilog file for specific Chisel module, us
 
 ```
 
-sbt "runMain gemm.${chisel_module_name}"
+sbt "runMain gemm.${chisel_module_name}" -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
 
 ```
 
@@ -364,7 +364,7 @@ For instance, to generate the system verilog file for Base Gemm, use:
 
 ```
 
-sbt "runMain gemm.GemmArray"
+sbt "runMain gemm.GemmArray" -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
 
 ```
 
