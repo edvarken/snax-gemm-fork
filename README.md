@@ -346,6 +346,14 @@ sbt "testOnly gemm.GemmArrayRandomTest" -java-home /Library/Java/JavaVirtualMach
 
 to only run the random data and random matrix size test for Base Gemm.
 
+
+```
+
+sbt "testOnly gemm.BlockGemmRandomTest" -java-home /Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home
+
+```
+to only run the random data and random matrix size(M,K,N) for Block Gemm.
+
 Note: run the test for the Chisel module also generate the corresponding system verilog file to test if the system verilog file can be generated correctly.
 
 ## Generate System Verilog file
